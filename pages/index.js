@@ -16,14 +16,21 @@ export default function Home() {
       {/* <div className="absolute top-0 -left-4 w-72 h-72 bg-purple-300 rounded-full mix-blend-multiply filter blur-xl animate-blob"></div>
       <div className="absolute top-0 right-0 lg:-right-4 w-72 h-72 bg-yellow-300 rounded-full mix-blend-multiply filter blur-xl animate-blob animation-delay-2000"></div>
       <div className="absolute -bottom-8 lg:left-20 w-72 h-72 bg-pink-300 rounded-full mix-blend-multiply filter blur-xl animate-blob animation-delay-4000"></div> */}
-      <Image
-        src="https://raw.githubusercontent.com/VirkSaab/portfolio/main/pages/mypwb.png"
-        alt="Background image"
+      
+      {/* <Image
+        src="https://raw.githubusercontent.com/VirkSaab/portfolio/main/pages/background.jpg"
         layout='fill'
-      />
-      <div className="flex lg:h-screen lg:w-screen content-center">  {/* MAIN */}
+        alt="Profile photo"
+      /> */}
+      <div className="flex lg:h-screen lg:w-screen content-center repos"
+        style={{
+          backgroundImage: 'url("https://raw.githubusercontent.com/VirkSaab/portfolio/main/pages/background.jpg")',
+          backgroundRepeat: 'no-repeat',
+          backgroundSize: 'cover'
+        }}
+      >  {/* MAIN */}
         <div className="sm:m-5 lg:m-auto max-w-7xl"> {/* CENTER */}
-          <div className="grid grid-rows-4 lg:grid-rows-1 lg:grid-cols-4 gap-2"> {/* GRID SYSTEM */}
+          <div className="grid grid-rows-4 lg:grid-rows-1 lg:grid-cols-4 gap-2 backdrop-blur-lg"> {/* GRID SYSTEM */}
             {/* SMALL LEFT PANE */}
             <div className="rounded-lg grid row-span-1 lg:row-auto lg:col-span-1 bg-gray-900 bg-opacity-50 content-center lg:self-center lg:place-content-evenly">
 
@@ -104,61 +111,6 @@ export default function Home() {
 
         </div>
       </div>
-
-      {/* <div className='grid grid-rows-4 lg:grid-rows-1 lg:grid-cols-5 lg:content-end relative lg:h-screen w-screen lg:content-center lg:flex'>
-        
-        <div className="row-span-1 lg:row-auto lg:col-span-1 lg:flex">
-          <div className="rounded shadow-lg p-2 m-auto text-center">
-            <Image
-              className="rounded-full border-none shadow-sm"
-              src="https://raw.githubusercontent.com/VirkSaab/portfolio/main/pages/mypwb.png"
-              alt="Profile photo"
-              width={200}
-              height={200 * 1.2}
-            />
-            <div className='font-bold text-2xl'>Jitender Singh</div>
-            <p className="text-center">Chief Information Officer</p>
-            <p className="text-center">@</p>
-            <p className="text-center">Manentia Ai</p>
-          </div>
-        </div>
-
-        <div className="row-span-3 lg:row-auto lg:col-span-4 lg:flex">
-          <div className="rounded shadow-lg p-2 m-auto">
-            About
-            <div className="flex">
-              <div className='font-bold text-lg'>Experience</div>
-              <p className="text-center">The quick brown fox jumps over's the lazy dog</p>
-            </div>
-            <div className="flex">
-              <div className='font-bold text-lg'>Experience</div>
-              <p className="text-center">The quick brown fox jumps over's the lazy dog</p>
-            </div>
-            <div className="flex">
-              <div className='font-bold text-lg'>Experience</div>
-              <p className="text-center">The quick brown fox jumps over's the lazy dog</p>
-            </div>
-            <div className="flex">
-              <div className='font-bold text-lg'>Experience</div>
-              <p className="text-center">The quick brown fox jumps over's the lazy dog</p>
-            </div>
-            <div className="flex">
-              <div className='font-bold text-lg'>Experience</div>
-              <p className="text-center">The quick brown fox jumps over's the lazy dog</p>
-            </div>
-            <div className="flex">
-              <div className='font-bold text-lg'>Experience</div>
-              <p className="text-center">The quick brown fox jumps over's the lazy dog</p>
-            </div>
-            <div className="flex">
-              <div className='font-bold text-lg'>Experience</div>
-              <p className="text-center">The quick brown fox jumps over's the lazy dog</p>
-            </div>
-          </div>
-
-        </div>
-
-      </div> */}
     </main >
   )
 }
