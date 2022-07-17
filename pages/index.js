@@ -5,7 +5,15 @@ import Image from 'next/image'
 
 export default function Home() {
   return (
-    <main className='grid lg:fixed text-white bg-gradient-to-r from-sky-800 to-indigo-800 font-sans'>
+    <main className='grid lg:fixed text-white bg-gradient-to-r from-sky-800 to-indigo-800 font-sans'
+      style={{
+        backgroundImage: 'radial-gradient(rgba(50,50,50, .10), rgba(0, 0, 0, 0.50)), url("https://raw.githubusercontent.com/VirkSaab/portfolio/main/pages/background.jpg")',
+        backgroundRepeat: 'no-repeat',
+        backgroundSize: 'cover',
+      }}
+    >
+
+
       <Script src="https://cdn.tailwindcss.com" strategy="beforeInteractive" />
       <Head>
         <title>JSV-CV</title>
@@ -13,26 +21,39 @@ export default function Home() {
       </Head>
 
 
+      <style jsx global>{`
+        p {
+          font-size: 1.2rem;
+        }
+
+        h1 {
+          font-size: 3rem;
+        }
+
+        h2 {
+          font-size: 2rem;
+        }
+        
+        h3 {
+          font-size: 1.7rem;
+        }
+      `}</style>
+
       {/* <div className="absolute top-0 -left-4 w-72 h-72 bg-purple-300 rounded-full mix-blend-multiply filter blur-xl animate-blob"></div>
       <div className="absolute top-0 right-0 lg:-right-4 w-72 h-72 bg-yellow-300 rounded-full mix-blend-multiply filter blur-xl animate-blob animation-delay-2000"></div>
       <div className="absolute -bottom-8 lg:left-20 w-72 h-72 bg-pink-300 rounded-full mix-blend-multiply filter blur-xl animate-blob animation-delay-4000"></div> */}
-      
+
       {/* <Image
         src="https://raw.githubusercontent.com/VirkSaab/portfolio/main/pages/background.jpg"
         layout='fill'
         alt="Profile photo"
       /> */}
-      <div className="flex lg:h-screen lg:w-screen content-center repos"
-        style={{
-          backgroundImage: 'url("https://raw.githubusercontent.com/VirkSaab/portfolio/main/pages/background.jpg")',
-          backgroundRepeat: 'no-repeat',
-          backgroundSize: 'cover'
-        }}
-      >  {/* MAIN */}
-        <div className="sm:m-5 lg:m-auto max-w-7xl"> {/* CENTER */}
+
+      <div className="flex lg:h-screen lg:w-screen content-center">  {/* MAIN */}
+        <div className="sm:m-5 lg:m-auto max-w-7xl min-h-7xl"> {/* CENTER */}
           <div className="grid grid-rows-4 lg:grid-rows-1 lg:grid-cols-4 gap-2 backdrop-blur-lg"> {/* GRID SYSTEM */}
             {/* SMALL LEFT PANE */}
-            <div className="rounded-lg grid row-span-1 lg:row-auto lg:col-span-1 bg-gray-900 bg-opacity-50 content-center lg:self-center lg:place-content-evenly">
+            <div className="rounded-lg grid row-span-1 lg:row-auto lg:col-span-1 bg-gray-500 bg-opacity-30 content-center lg:self-center lg:place-content-evenly">
 
               {/* BRIEF CONTENT HERE */}
               <div className="rounded-lg shadow-lg p-5 text-center">
@@ -40,19 +61,25 @@ export default function Home() {
                   className="rounded-full border-none shadow-sm"
                   src="https://raw.githubusercontent.com/VirkSaab/portfolio/main/pages/mypwb.png"
                   alt="Profile photo"
-                  width={200}
-                  height={200 * 1.2}
+                  width={400}
+                  height={400 * 1.25}
                 />
-                <div className='font-bold text-2xl mt-5' style={{ 'fontSize': '2rem' }}>Jitender Singh</div>
-                <p className="text-center text-lg m-5 ">Chief Information Officer @ Manentia Ai</p>
-
+                <h1 className='font-bold mt-5'>Jitender Singh</h1>
+                <h3 className="text-center m-5 ">
+                  <div>Chief Information Officer </div>
+                  <div> @ </div>
+                  <div>Manentia Ai</div>
+                </h3>
+                <p className="text-center m-5">
+                  An enthusiastic, devoted learner who always enjoys multidisciplinary research with a specific interest in Deep Learning and Computer Vision.
+                </p>
                 {/* BUTTONS */}
                 <span className='flex flex-row justify-center m-5 pt-5'>
                   {/* GitHub */}
                   <a type="button" href="https://github.com/VirkSaab"
-                    className="col text-white text-center bg-[#24292F] rounded-lg p-2 m-0 mr-3">
+                    className="col text-white text-center m-5">
                     <svg
-                      className="w-4 h-4"
+                      className="w-8 h-8"
                       aria-hidden="true"
                       focusable="false"
                       data-prefix="fab"
@@ -66,9 +93,9 @@ export default function Home() {
                   </a>
                   {/* LinkedIn */}
                   <a type="button" href="https://www.linkedin.com/in/jsv47/"
-                    className="col text-white text-center bg-[#0a66c2] rounded-lg p-2 m-0 mr-3">
+                    className="col text-white text-center m-5">
                     <svg
-                      className="w-4 h-4 text-white fill-current"
+                      className="w-8 h-8 text-white fill-current"
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 448 512">
                       <path
@@ -78,9 +105,9 @@ export default function Home() {
                   </a>
                   {/* ResearchGate */}
                   <a type="button" href="https://www.researchgate.net/profile/Jitender_Virk2"
-                    className="col text-white text-center bg-[#00ccbb] rounded-lg p-2 m-0">
+                    className="col text-white text-center m-5">
                     <svg
-                      className="w-4 h-4 text-white fill-current"
+                      className="w-8 h-8 text-white fill-current"
                       viewBox="0 0 24 24"
                       xmlns="http://www.w3.org/2000/svg">
                       <title>ResearchGate</title>
@@ -94,14 +121,14 @@ export default function Home() {
 
             </div>
             {/* LARGE RIGHT PANE */}
-            <div className="rounded-lg grid row-span-3 lg:row-auto lg:col-span-3 bg-gray-900 bg-opacity-50">
+            <div className="rounded-lg grid row-span-3 lg:row-auto lg:col-span-3 bg-gray-500 bg-opacity-30">
               {/* DETAILED CONTENT HERE */}
               <div className='flex flex-col'>
-                <div className='font-bold text-lg mt-5 pl-5'>About</div>
+                <h2 className='font-bold mt-5 ml-5'>Education</h2>
                 <div className="text-center m-5">
                   <p className="text-justify">
-                    An enthusiastic, devoted learner who always enjoys multidisciplinary research with a specific interest in Deep Learning and Computer Vision.
-                    I recently designed, developed, and implemented a lightweight convolutional neural network architecture using mixed asymmetric kernels for Domain-Specific, Semi-Supervised Transfer Learning In Medical Imaging. This work is published at CODS-COMAD 2021 – a premier ACM India conference on Data Science & Knowledge Discovery. Concurrently, I worked on the multi-modal classification of Alzheimer’s using MRI and PET scans (currently under review) and risk prediction for Postpartum Depression (PPD) in collaboration with Uppsala University Hospital, Uppsala, Sweden. Currently, I am working on MRSI and DKI Evaluation of HIV-1 Clade C Infection in the Whole Brain and Infantile Tremor Syndrome (ITS) in infants DTI data analysis at PGIMER Chandigarh. Concurrently, I am working on Visual Question Answering with medical imaging (VQA-Med) in collaboration with the Inception Institute of Artificial Intelligence and IIT Ropar.
+                    Education here
+
                   </p>
                 </div>
               </div>
