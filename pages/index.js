@@ -2,12 +2,13 @@ import Link from 'next/link'
 import Head from 'next/head'
 import Script from 'next/script'
 import Image from 'next/image'
+import Education from './Education'
 
 export default function Home() {
   return (
     <main className='grid lg:fixed text-white bg-gradient-to-r from-sky-800 to-indigo-800 font-sans'
       style={{
-        backgroundImage: 'radial-gradient(rgba(50,50,50, .10), rgba(0, 0, 0, 0.50)), url("https://raw.githubusercontent.com/VirkSaab/portfolio/main/pages/background.jpg")',
+        backgroundImage: 'radial-gradient(rgba(50,50,50, .10), rgba(0, 0, 0, 0.60)), url("https://raw.githubusercontent.com/VirkSaab/portfolio/main/pages/background.jpg")',
         backgroundRepeat: 'no-repeat',
         backgroundSize: 'cover',
       }}
@@ -21,21 +22,21 @@ export default function Home() {
       </Head>
 
 
-      <style jsx global>{`
+      <style>{`
         p {
           font-size: 1.2rem;
         }
 
         h1 {
-          font-size: 3rem;
+          font-size: 2.5rem;
         }
 
         h2 {
-          font-size: 2rem;
+          font-size: 1.8rem;
         }
         
         h3 {
-          font-size: 1.7rem;
+          font-size: 1.5rem;
         }
       `}</style>
 
@@ -51,30 +52,27 @@ export default function Home() {
 
       <div className="flex lg:h-screen lg:w-screen content-center">  {/* MAIN */}
         <div className="sm:m-5 lg:m-auto max-w-7xl min-h-7xl"> {/* CENTER */}
-          <div className="grid grid-rows-4 lg:grid-rows-1 lg:grid-cols-4 gap-2 backdrop-blur-lg"> {/* GRID SYSTEM */}
+          <div className="grid grid-rows-4 lg:grid-rows-1 lg:grid-cols-4 gap-2"> {/* GRID SYSTEM */}
             {/* SMALL LEFT PANE */}
-            <div className="rounded-lg grid row-span-1 lg:row-auto lg:col-span-1 bg-gray-500 bg-opacity-30 content-center lg:self-center lg:place-content-evenly">
+            <div className="backdrop-blur-sm rounded-lg grid row-span-1 lg:row-auto lg:col-span-1 bg-gray-500 bg-opacity-30 content-center lg:self-center lg:place-content-evenly">
 
               {/* BRIEF CONTENT HERE */}
-              <div className="rounded-lg shadow-lg p-5 text-center">
+              <div className="rounded-lg shadow-lg p-5 pt-0 text-center">
                 <Image
                   className="rounded-full border-none shadow-sm"
                   src="https://raw.githubusercontent.com/VirkSaab/portfolio/main/pages/mypwb.png"
                   alt="Profile photo"
-                  width={400}
-                  height={400 * 1.25}
+                  width={300}
+                  height={300 * 1.25}
                 />
                 <h1 className='font-bold mt-5'>Jitender Singh</h1>
-                <h3 className="text-center m-5 ">
-                  <div>Chief Information Officer </div>
-                  <div> @ </div>
-                  <div>Manentia Ai</div>
-                </h3>
+                <hr className='text-center m-auto mt-0 p-0' style={{ width: '80%' }} />
+                <h3 className="text-center m-5 ">CIO @ Manentia Ai</h3>
                 <p className="text-center m-5">
                   An enthusiastic, devoted learner who always enjoys multidisciplinary research with a specific interest in Deep Learning and Computer Vision.
                 </p>
                 {/* BUTTONS */}
-                <span className='flex flex-row justify-center m-5 pt-5'>
+                <span className='flex flex-row justify-center pt-5'>
                   {/* GitHub */}
                   <a type="button" href="https://github.com/VirkSaab"
                     className="col text-white text-center m-5">
@@ -115,22 +113,14 @@ export default function Home() {
                     </svg>
                   </a>
                 </span>
-
-
               </div>
-
             </div>
             {/* LARGE RIGHT PANE */}
-            <div className="rounded-lg grid row-span-3 lg:row-auto lg:col-span-3 bg-gray-500 bg-opacity-30">
+            <div className="backdrop-blur-xl rounded-lg grid row-span-3 lg:row-auto lg:col-span-3 bg-gray-500 bg-opacity-30">
               {/* DETAILED CONTENT HERE */}
               <div className='flex flex-col'>
                 <h2 className='font-bold mt-5 ml-5'>Education</h2>
-                <div className="text-center m-5">
-                  <p className="text-justify">
-                    Education here
-
-                  </p>
-                </div>
+                <Education />
               </div>
 
             </div>
