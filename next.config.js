@@ -1,6 +1,6 @@
 module.exports = {
   reactStrictMode: false,
-  // basePath: '/portfolio',
+  basePath: '/portfolio',
   images: {
     loader: 'akamai',
     path: '',

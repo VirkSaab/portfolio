@@ -52,7 +52,7 @@ export default function Home() {
 
       <div className="flex lg:h-screen lg:w-screen content-center">  {/* MAIN */}
         <div className="sm:m-5 lg:m-auto max-w-7xl min-h-7xl"> {/* CENTER */}
-          <div className="grid grid-rows-4 lg:grid-rows-1 lg:grid-cols-4 gap-2"> {/* GRID SYSTEM */}
+          <div className="grid grid-rows-3 lg:grid-rows-1 lg:grid-cols-4 gap-2"> {/* GRID SYSTEM */}
             {/* SMALL LEFT PANE */}
             <div className="backdrop-blur-sm rounded-lg grid row-span-1 lg:row-auto lg:col-span-1 bg-gray-500 bg-opacity-30 content-center lg:self-center lg:place-content-evenly">
 
@@ -115,10 +115,10 @@ export default function Home() {
               </div>
             </div>
             {/* LARGE RIGHT PANE */}
-            <div className="backdrop-blur-xl rounded-lg grid row-span-3 lg:row-auto lg:col-span-3 bg-gray-500 bg-opacity-30">
+            <div className="backdrop-blur-xl rounded-lg grid row-span-2 lg:row-auto lg:col-span-3 bg-gray-500 bg-opacity-30">
               {/* DETAILED CONTENT HERE */}
               <div className='flex flex-col'>
-                <h2 className='font-bold mt-5 ml-5'>Education</h2>
+                <h2 className='font-bold m-5'>Education</h2>
                 <Education />
               </div>
 
