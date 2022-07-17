@@ -1,9 +1,10 @@
 export default function Education() {
     return (
-        <div className="grid col text-justify m-5 gap-4">
+        <div className="grid col text-justify sm:m-5 gap-4 text-left">
             {/* MASTERS DEGREE */}
-            <div class="p-5 backdrop-blur-xl rounded-lg flex items-center justify-between">
-                <div class="flex-1">
+            <hr className='text-center m-auto mt-0 p-0' style={{ borderWidth:0, backgroundColor:'white', width: '95%', height: '1px'}} />
+            <div class="flex flex-col lg:flex-row p-5 backdrop-blur-xl rounded-lg items-center justify-between">
+                <div class="basis-3/4">
                     <h3 className='font-bold'>
                         Master of Engineering in Computer Science and Engineering
                     </h3>
@@ -51,14 +52,13 @@ export default function Education() {
                             </a>
                         </li>
                     </ul>
-
                 </div>
-                <div>Jul 2020 - Jul 2022</div>
+                <div class="basis-1/4 text-center">Jul 2020 - Jul 2022</div>
             </div>
-            <hr className='text-center m-auto mt-0 p-0' style={{ borderWidth:0, color:'gray', backgroundColor:'gray', width: '70%', height: '1px'}} />
+            <hr className='text-center m-auto mt-0 p-0' style={{ borderWidth:0, backgroundColor:'gray', width: '70%', height: '1px'}} />
             {/* BACHELORES DEGREE */}
-            <div class="p-5 backdrop-blur-xl rounded-lg flex items-center justify-between">
-                <div class="flex-1">
+            <div class="flex flex-col lg:flex-row p-5 backdrop-blur-xl rounded-lg items-center justify-between">
+                <div class="basis-3/4">
                     <h3 className='font-bold'>
                         Bachelor of Technology in Computer Science and Engineering
                     </h3>
@@ -139,7 +139,7 @@ export default function Education() {
                         </li>
                     </ul>
                 </div>
-                <div>Jul 2013 - Jul 2017</div>
+                <div class="basis-1/4 text-center">Jul 2013 - Jul 2017</div>
             </div>
 
 

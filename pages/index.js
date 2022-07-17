@@ -66,7 +66,6 @@ export default function Home() {
                   height={300 * 1.25}
                 />
                 <h1 className='font-bold mt-5'>Jitender Singh</h1>
-                <hr className='text-center m-auto mt-0 p-0' style={{ width: '80%' }} />
                 <h3 className="text-center m-5 ">CIO @ Manentia Ai</h3>
                 <p className="text-center m-5">
                   An enthusiastic, devoted learner who always enjoys multidisciplinary research with a specific interest in Deep Learning and Computer Vision.
