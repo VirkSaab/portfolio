@@ -4,9 +4,9 @@ export default function Education() {
             {/* MASTERS DEGREE */}
             <div class="p-5 backdrop-blur-xl rounded-lg flex items-center justify-between">
                 <div class="flex-1">
-                    <p className='font-bold'>
+                    <h3 className='font-bold'>
                         Master of Engineering in Computer Science and Engineering
-                    </p>
+                    </h3>
                     <p>
                         (Artificial Intelligence and Machine Learning Specilization)
                     </p>
@@ -55,13 +55,13 @@ export default function Education() {
                 </div>
                 <div>Jul 2020 - Jul 2022</div>
             </div>
-
+            <hr className='text-center m-auto mt-0 p-0' style={{ borderWidth:0, color:'gray', backgroundColor:'gray', width: '70%', height: '1px'}} />
             {/* BACHELORES DEGREE */}
             <div class="p-5 backdrop-blur-xl rounded-lg flex items-center justify-between">
                 <div class="flex-1">
-                    <p className='font-bold'>
+                    <h3 className='font-bold'>
                         Bachelor of Technology in Computer Science and Engineering
-                    </p>
+                    </h3>
                     <p className='italic mt-2'>
                         JECRC University
                     </p>
