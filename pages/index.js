@@ -2,7 +2,8 @@ import Link from 'next/link'
 import Head from 'next/head'
 import Script from 'next/script'
 import Image from 'next/image'
-import Education from './Education'
+import Education from './info/Education'
+import Experience from './info/Experience'
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
       <Script src="https://cdn.tailwindcss.com" strategy="beforeInteractive" />
       <Head>
         <title>JSV-CV</title>
+        <meta name='viewport' content="width=device-width, initial-scale=1" />
         {/* <script src="https://cdn.tailwindcss.com"></script> */}
       </Head>
 
@@ -38,6 +40,33 @@ export default function Home() {
         h3 {
           font-size: 1.5rem;
         }
+        .hidescroll {
+          overflow-y: scroll;
+          -ms-overflow-style: none;
+          scrollbar-width: none;
+        }
+        .hidescroll::-webkit-scrollbar {
+          display: none;
+        }
+        .betterscroll {
+          overflow-y: scroll;
+          -ms-overflow-style: none;
+          scrollbar-width: none;
+        }
+        .betterscroll::-webkit-scrollbar {
+          width: 5px;
+        }
+        .betterscroll::-webkit-scrollbar-track {
+          background: transparent;
+        }
+        .betterscroll::-webkit-scrollbar-thumb {
+          background: #666;
+        }
+        .betterscroll::-webkit-scrollbar-thumb:hover {
+          background: #111;
+        }
+
+
       `}</style>
 
       {/* <div className="absolute top-0 -left-4 w-72 h-72 bg-purple-300 rounded-full mix-blend-multiply filter blur-xl animate-blob"></div>
@@ -52,9 +81,9 @@ export default function Home() {
 
       <div className="flex lg:h-screen lg:w-screen content-center">  {/* MAIN */}
         <div className="sm:m-5 lg:m-auto max-w-7xl min-h-7xl"> {/* CENTER */}
-          <div className="grid grid-rows-3 lg:grid-rows-1 lg:grid-cols-4 gap-2"> {/* GRID SYSTEM */}
+          <div className="grid grid-rows-2 lg:grid-rows-1 lg:grid-cols-4 gap-2"> {/* GRID SYSTEM */}
             {/* SMALL LEFT PANE */}
-            <div className="backdrop-blur-sm rounded-lg grid row-span-1 lg:row-auto lg:col-span-1 bg-gray-500 bg-opacity-30 content-center lg:self-center lg:place-content-evenly">
+            <div className="backdrop-blur-sm rounded-lg grid lg:row-auto lg:col-span-1 bg-gray-500 bg-opacity-30 lg:self-center lg:place-content-evenly">
 
               {/* BRIEF CONTENT HERE */}
               <div className="rounded-lg shadow-lg p-5 pt-0 text-center">
@@ -71,7 +100,7 @@ export default function Home() {
                   An enthusiastic, devoted learner who always enjoys multidisciplinary research with a specific interest in Deep Learning and Computer Vision.
                 </p>
                 {/* BUTTONS */}
-                <span className='flex flex-row justify-center pt-5'>
+                <span className='flex flex-row justify-center'>
                   {/* GitHub */}
                   <a type="button" href="https://github.com/VirkSaab"
                     className="col text-white text-center m-5">
@@ -115,13 +144,50 @@ export default function Home() {
               </div>
             </div>
             {/* LARGE RIGHT PANE */}
-            <div className="backdrop-blur-xl rounded-lg grid row-span-2 lg:row-auto lg:col-span-3 bg-gray-500 bg-opacity-30">
+            <div className="backdrop-blur-xl rounded-lg shadow-lg grid lg:row-auto lg:col-span-3 bg-gray-500 bg-opacity-30">
               {/* DETAILED CONTENT HERE */}
               <div className='flex flex-col'>
-                <h2 className='font-bold m-5'>Education</h2>
-                <Education />
-              </div>
+                <div className='font-bold p-2 rounded-lg shadow-2xl'>
+                  <div class="flex flex-row">
+                    <h2 class="basis-4/6 text-left">Education</h2>
+                    <div class="basis-2/6 text-right">
+                      <button className='mr-10 hover:text-yellow-300'>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="h-8 w-8"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                          stroke-width="2">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+                        </svg>
+                      </button>
+                      <button className='hover:text-yellow-300'>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="h-8 w-8"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                          stroke-width="2">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
 
+
+                <div className='flex overflow-auto betterscroll mb-5' style={{ 'max-height': '44.5rem' }}>
+                  <div className='grid col text-justify sm:m-5 gap-4 text-left'
+                    id="infoSectionID"
+                  >
+                    <Experience />
+                  </div>
+                </div>
+
+
+              </div>
             </div>
           </div>
 
